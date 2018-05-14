@@ -22,31 +22,54 @@ There are three simple training tasks. Two are focussed on JavaScript and one on
 
 The first task requires you to edit the file `training-files/scripts/title.js`. The aim of the task is to add a title to the webpage by adding text to the `H1` element in the HTML.
 
-```
+```html
 <h1 id="blog-title"></h1>
 ```
 
 The first step is to define what our title will be. We do this by editing the value that is assigned to the `title` variable in the JavaScript code. This will define what text will appear on the webpage.
 
-```
+```javascript
 var title = 'Set the title to what you want';
 ```
 
 Next we need to select the HTML element we want to add the title text to. In this case it's the `blog-title` element referenced above and we achieve this by using the `getElementById` method available in JavaScript.
 
-```
+```javascript
 var titleElement = document.getElementById('blog-title');
 ```
 
 Finally we need to assign the title we defined to the HTML element. We do this by assigning our `title` variable to the `titleElement` attribute `innerHTML` property.
 
-```
+```javascript
 titleElement.innerHTML = title;
 ```
 
 And we're done. Save your file and when you refresh your HTML page you will now see the title you defined appear on the web page.
 
 ### Task Two: Add the Blog Posts
+
+Open the file `training-files/scripts/blogs.js`. In this task we are going to add some blog posts to our web page which will involve looping through an array and adding each array item to the page.
+
+Our blogs array is made up of a list of objects that contain titles and authors.
+
+```javascript
+var blogPosts = [
+    {
+        'title': 'Hello World',
+        'author': 'John'
+    },
+    {
+        'title': 'Foo Bar',
+        'author': 'Chris'
+    },
+    {
+        'title': 'Car Park',
+        'author': 'James'
+    }
+];
+```
+
+
 
 ### Task Three: Style the Page
 
