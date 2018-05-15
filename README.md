@@ -4,15 +4,65 @@ This is a simple training document and group of files that will help 'noobs' get
 
 The training files are broken down into two core folders `training-files` and `complete files`. The complete files folder contains all the working and completed code so you can see what the project should look like when you have completed the training. The training files folder contains the same basic code with parts missing, this is so you can work through the code, fill in the gaps and learn how the code works.
 
+## Training Aims
+
+This training documentation aims to give you a very basic understanding of HTML, CSS and JavaScript and how they relate to each other.
+
+You will learn:
+
+- What HTML looks like and how it is structured.
+- How to manipulate and add content to an HTML page using JavaScript.
+- How to select HTML elements and style them using CSS.
+
 ## Getting Started
 
-## Training Aims
+To complete this training course you need to edit the files in the `training-files/` directory and follow the tasks below.
+
+Each training task requires you to make minor edits to the code and will require you to uncomment existing code.
+
+The completed files for comparison can be found in the `complete-files` directory. These files are for reference, do not touch them.
+
+A woking version of this code can be found on [JSFiddle](https://jsfiddle.net/dg30snnq/)
 
 ## What is HTML
 
+Hyper Text Markup Language is a way of marking up text so it can be shared over the web. It gives text structure and allows you to add additional content such as imagery and video.
+
+HTML is made up of nested elements / tags that help define structure and text hierarchy. Each tag has an opening and closing tag.
+
+As an example here is a simple unordered list of data:
+
+```html
+<ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+</ul>
+```
+
 ## What is CSS
 
+Cascading Style Sheets allow you to style HTML markup. They allow you to add color, font styles, structure, layout and many more styles.
+
+CSS is based around selectors which allow you to select elements from within an HTML document and apply styles to them individually.
+
+As an example the following selector would turn our list items above green.
+
+```css
+li {
+    color: green;
+}
+```
+
 ## What is JavaScript
+
+JavaScript is a dynamic scripting language that allows us to apply interactivity to an HTML page.
+
+For example the following code would add an alert box to the web page that display the message "Hello World!".
+
+```JavaScript
+alert('Hello World');
+```
 
 ## Training Tasks
 
@@ -145,7 +195,7 @@ We will do the following:
 - Italicise each blog post
 - Set the color of each blog post to dark magenta
 
-```
+```css
 h2 {
     font-weight: normal;
     padding-left: 30px;
@@ -159,9 +209,16 @@ p {
 
 Again save the file and reload your web page and they styles will have taken effect.
 
-**Note** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript.
+**Note:** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript.
 
 ## Further Reading and Useful Resources
+
+The following websites provide useful resources and further reading on code:
+
+- [Dev.to](https://dev.to/): A community of developers sharing learnings on code.
+- [MDN](https://developer.mozilla.org/bm/docs/Web/JavaScript): Mozilla's amazing JavaScript coding documentation.
+- [CSS Tricks](https://css-tricks.com/): Lessons and tips on writing better CSS.
+- [JSFiddle](https://jsfiddle.net/): A great place to practice writing CSS, HTML, JavaScript.
 
 ## Author
 
