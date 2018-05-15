@@ -1,8 +1,8 @@
 # Code 101 (HTML, CSS & JavaScript)
 
-This is a simple training document and group of files that will help 'noobs' get started with writing code. It has a focus on HTML, CSS and JavaScript.
+This is a simple training document that helps 'noobs' begin writing code. It has a focus on HTML, CSS and JavaScript.
 
-The training files are broken down into two core folders `training-files` and `complete files`. The complete files folder contains all the working and completed code so you can see what the project should look like when you have completed the training. The training files folder contains the same basic code with parts missing, this is so you can work through the code, fill in the gaps and learn how the code works.
+The training files are broken down into two core folders `training-files` and `complete files`. The complete files folder contains all the working and complete code so you can see what the project should look like when you complete the training. The training files folder contains the same basic code with parts missing, this is so you can work through the code, fill in the gaps and learn how the code works.
 
 ## Training Aims
 
@@ -16,15 +16,19 @@ You will learn:
 
 ## Getting Started
 
+Download the latest version of the training files from the releases tab on GitHub. UnZip the file and open the outputted folders in Atom or another text editor.
+
 To complete this training course you need to edit the files in the `training-files/` directory and follow the tasks below.
+
+To begin open the `training-files/index.html` file in a browser. You just need to click on the file and it will open automatically.
 
 Each training task requires you to make minor edits to the code and will require you to uncomment existing code.
 
-The completed files for comparison can be found in the `complete-files` directory. These files are for reference, do not touch them.
+The complete files for comparison can be found in the `complete-files` directory. These files are for reference, do not edit them.
 
 A woking version of this code can be found on [JSFiddle](https://jsfiddle.net/dg30snnq/)
 
-## What is HTML
+## What is HTML?
 
 Hyper Text Markup Language is a way of marking up text so it can be shared over the web. It gives text structure and allows you to add additional content such as imagery and video.
 
@@ -40,9 +44,9 @@ As an example here is a simple unordered list of data:
 </ul>
 ```
 
-## What is CSS
+## What is CSS?
 
-Cascading Style Sheets allow you to style HTML markup. They allow you to add color, font styles, structure, layout and many more styles.
+Cascading Style Sheets allow you to style HTML markup. They allow you to add color, font styles, structure, layout and much more.
 
 CSS is based around selectors which allow you to select elements from within an HTML document and apply styles to them individually.
 
@@ -54,11 +58,11 @@ li {
 }
 ```
 
-## What is JavaScript
+## What is JavaScript?
 
 JavaScript is a dynamic scripting language that allows us to apply interactivity to an HTML page.
 
-For example the following code would add an alert box to the web page that display the message "Hello World!".
+For example the code below will add an alert box to a web page and display the message "Hello World!".
 
 ```JavaScript
 alert('Hello World');
@@ -82,13 +86,13 @@ The first step is to define what our title will be. We do this by editing the va
 var title = 'Set the title to what you want';
 ```
 
-Next we need to select the HTML element we want to add the title text to. In this case it's the `blog-title` element referenced above and we achieve this by using the `getElementById` method available in JavaScript.
+Next we need to select the HTML element we want to add the title text to. In this case it's the `blog-title` element, defined by the `id=""` attribute and referenced above. We access the element using the `getElementById()` method available in JavaScript.
 
 ```javascript
 var titleElement = document.getElementById('blog-title');
 ```
 
-Finally we need to assign the title we defined to the HTML element. We do this by assigning our `title` variable to the `titleElement` attribute `innerHTML` property.
+Finally we assign the title to the HTML element. We do this by assigning our `title` variable to the `titleElement.innerHTML` property.
 
 ```javascript
 titleElement.innerHTML = title;
@@ -119,7 +123,7 @@ var blogPosts = [
 ];
 ```
 
-First we need to grab the element from the HTML where we want to display the blog posts and assign it to a variable. Again we use the JavaScript `getElementById()` method.
+First we grab the element from the HTML where we want to display the blog posts and assign it to a variable. Again we use the JavaScript `getElementById()` method, notice the `id="blog-posts"` in the HTML markup.
 
 ```javascript
 var postsHolder = document.getElementById('blog-posts');
@@ -128,7 +132,7 @@ var postsHolder = document.getElementById('blog-posts');
 The next step is to loop through the blog posts and assign them to our selected element. This involves a few steps:
 
 - Use the `forEach()` method to loop through the blogs.
-- Create a `<p>` / paragraph element to contain each blog element.
+- Create a `<p>` / paragraph element to contain each blog item.
 - Turn the array items in to text elements.
 - Add the text element to the paragraph element.
 - Append each paragraph element to the holder element we chose.
@@ -174,7 +178,7 @@ To begin open the `training-files/style.css` file. The first step is to set the 
 
 The code is made up of two parts:
 
-- A selector which defines the element we want to sytle.
+- A selector which defines the element we want to style.
 - Attributes that apply our styling.
 
 ```css
@@ -208,6 +212,8 @@ p {
 ```
 
 Again save the file and reload your web page and they styles will have taken effect.
+
+We've completed the training!! Well done!!
 
 **Note:** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript.
 
