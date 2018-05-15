@@ -69,9 +69,97 @@ var blogPosts = [
 ];
 ```
 
+First we need to grab the element from the HTML where we want to display the blog posts and assign it to a variable. Again we use the JavaScript `getElementById()` method.
 
+```javascript
+var postsHolder = document.getElementById('blog-posts');
+```
+
+The next step is to loop through the blog posts and assign them to our selected element. This involves a few steps:
+
+- Use the `forEach()` method to loop through the blogs.
+- Create a `<p>` / paragraph element to contain each blog element.
+- Turn the array items in to text elements.
+- Add the text element to the paragraph element.
+- Append each paragraph element to the holder element we chose.
+
+```javascript
+blogPosts.forEach((item) => {
+
+    // Create a new paragraph element
+    let post = document.createElement('p');
+
+    // Create a text element containing the text we want
+    let text = document.createTextNode(item.title + ': By ' + item.author);
+
+    // Add the text element to the paragraph element
+    post.appendChild(text);
+
+    // Add the post to the posts holder element
+    postsHolder.appendChild(post);
+});
+```
+
+Once this is done you can save your code and refresh the page you should see the blog posts appear.
 
 ### Task Three: Style the Page
+
+Currently our web page has no styling applied. To style the page we need to write some CSS that applies styles to our HTML page.
+
+On our page we have three elements to style:
+
+- The `<h1>` blog title
+- The `<h2>` posts title
+- The blog posts
+
+```html
+<h1 id="blog-title"></h1>
+<h2>Posts:</h2>
+<div id="blog-posts">
+
+</div>
+```
+
+To begin open the `training-files/style.css` file. The first step is to set the H1 element text to red and the font size to 50px.
+
+The code is made up of two parts:
+
+- A selector which defines the element we want to sytle.
+- Attributes that apply our styling.
+
+```css
+h1 {
+    color: red;
+    font-size: 50px;
+}
+```
+
+If you save this file and refresh the page you'll see the stylings applied.
+
+Next we want to edit the H2 element and the blog post elements.
+
+We will do the following:
+
+- Change the H2 element font weight
+- Add padding to the left of the H2 element
+- Italicise each blog post
+- Set the color of each blog post to dark magenta
+
+```
+h2 {
+    font-weight: normal;
+    padding-left: 30px;
+}
+
+p {
+    font-style: italic;
+    color: darkmagenta;
+}
+```
+
+Again save the file and reload your web page and they styles will have taken effect.
+
+**Note** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript.
 
 ## Further Reading and Useful Resources
 
