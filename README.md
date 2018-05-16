@@ -1,28 +1,28 @@
 # Code 101 (HTML, CSS & JavaScript)
 
-This is a simple training document that helps 'noobs' begin writing code. It has a focus on HTML, CSS and JavaScript.
+This is a training document that helps beginners learn code and it has a focus on HTML, CSS and JavaScript.
 
-The training files are broken down into two core folders `training-files` and `complete files`. The complete files folder contains all the working and complete code so you can see what the project should look like when you complete the training. The training files folder contains the same basic code with parts missing, this is so you can work through the code, fill in the gaps and learn how the code works.
+The training files are broken down into two folders `training-files` and `complete-files`. The complete files folder contains all the working, complete code so you can see what the project should look like when you complete the training. The training files folder contains the same basic code with parts missing, this is so you can work through the code, fill in the gaps and learn how the code works.
 
 ## Training Aims
 
-This training documentation aims to give you a very basic understanding of HTML, CSS and JavaScript and how they relate to each other.
+This training documentation aims to give you a basic understanding of HTML, CSS and JavaScript and how they relate to each other.
 
 You will learn:
 
-- What HTML looks like and how it is structured.
+- What HTML is and how it is structured.
 - How to manipulate and add content to an HTML page using JavaScript.
 - How to select HTML elements and style them using CSS.
 
 ## Getting Started
 
-Download the latest version of the training files from the releases tab on GitHub. UnZip the file and open the outputted folders in Atom or another text editor.
+Download the latest version of the training files from the [releases page](https://github.com/RobDWaller/code101/releases) on GitHub. UnZip the file and open the outputted folders in [Atom](https://atom.io/) or another text editor.
 
 To complete this training course you need to edit the files in the `training-files/` directory and follow the tasks below.
 
 To begin open the `training-files/index.html` file in a browser. You just need to click on the file and it will open automatically.
 
-Each training task requires you to make minor edits to the code and will require you to uncomment existing code.
+Each training task requires you to make minor edits to the code and will require you to [uncomment existing code](http://www.tizag.com/javascriptT/javascriptcomment.php).
 
 The complete files for comparison can be found in the `complete-files` directory. These files are for reference, do not edit them.
 
@@ -30,11 +30,11 @@ A woking version of this code can be found on [JSFiddle](https://jsfiddle.net/dg
 
 ## What is HTML?
 
-Hyper Text Markup Language is a way of marking up text so it can be shared over the web. It gives text structure and allows you to add additional content such as imagery and video.
+Hyper Text Markup Language is a way of marking up text so it can be shared over the web. It gives text structure and allows you to add content such as imagery and video.
 
 HTML is made up of nested elements / tags that help define structure and text hierarchy. Each tag has an opening and closing tag.
 
-As an example here is a simple unordered list of data:
+As an example here is a simple unordered list of data marked up by HTML:
 
 ```html
 <ul>
@@ -44,13 +44,19 @@ As an example here is a simple unordered list of data:
 </ul>
 ```
 
+If will output a bullet pointed list:
+
+- Item One
+- Item Two
+- Item Three
+
 ## What is CSS?
 
-Cascading Style Sheets allow you to style HTML markup. They allow you to add color, font styles, structure, layout and much more.
+Cascading Style Sheets allow you to style HTML markup. You can add color, font styles, structure, layout and much more.
 
 CSS is based around selectors which allow you to select elements from within an HTML document and apply styles to them individually.
 
-As an example the following selector would turn our list items above green.
+As an example the following `li` selector would turn our list items `<li>` above green.
 
 ```css
 li {
@@ -60,7 +66,7 @@ li {
 
 ## What is JavaScript?
 
-JavaScript is a dynamic scripting language that allows us to apply interactivity to an HTML page.
+JavaScript is a dynamic scripting language that allows you to apply interactivity to an HTML page.
 
 For example the code below will add an alert box to a web page and display the message "Hello World!".
 
@@ -70,41 +76,43 @@ alert('Hello World');
 
 ## Training Tasks
 
-There are three simple training tasks. Two are focussed on JavaScript and one on CSS, both of which make use of HTML.
+There are three training tasks, two are focussed on JavaScript and one on CSS. All the tasks make use of and effect HTML.
 
-### Task One: Add a Page Title
+Before you begin remember to open the code in a text editor like [Atom](https://atom.io/) and the `training-files/index.html` file in a web browser such as Chrome.
 
-The first task requires you to edit the file `training-files/scripts/title.js`. The aim of the task is to add a title to the webpage by adding text to the `H1` element in the HTML.
+### Task One: Add a Page Title with JavaScript
+
+The first task requires you to edit the file `training-files/scripts/title.js`. The aim is to add a title to the webpage by placing text within the `H1` element in the HTML file `index.html`.
 
 ```html
 <h1 id="blog-title"></h1>
 ```
 
-The first step is to define what our title will be. We do this by editing the value that is assigned to the `title` variable in the JavaScript code. This will define what text will appear on the webpage.
+To define what our page title will be we need to assign a value to the `title` variable in the `title.js` file. Find the title variable and place some text between the quote marks and end your line with a semi-colon `;`.
 
 ```javascript
 var title = 'Set the title to what you want';
 ```
 
-Next we need to select the HTML element we want to add the title text to. In this case it's the `blog-title` element, defined by the `id=""` attribute and referenced above. We access the element using the `getElementById()` method available in JavaScript.
+Next we need to select the HTML element we want to add the title text to. In this case it's the `blog-title` element in the `index.html` file. The connection between the JavaScript is made via the `id="blog-title"` attribute place on the H1 element in the `index.html` file. We access the in JavaScript element using the `getElementById()` method available in JavaScript.
 
 ```javascript
 var titleElement = document.getElementById('blog-title');
 ```
 
-Finally we assign the title to the HTML element. We do this by assigning our `title` variable to the `titleElement.innerHTML` property.
+Finally we assign the title to the HTML element. We do this by assigning our `title` variable to a `innerHTML` property on the `titleElement` variable.
 
 ```javascript
 titleElement.innerHTML = title;
 ```
 
-And we're done. Save your file and when you refresh your HTML page you will now see the title you defined appear on the web page.
+And we're done. Save your `title.js` file and when you refresh your HTML page in your browser you will now see the title you defined appear on the web page.
 
-### Task Two: Add the Blog Posts
+If you have any problems it will most likely relate to syntax. Check that any text you added sits within quote marks and that all your code lines end with a semi-colon.
 
-Open the file `training-files/scripts/blogs.js`. In this task we are going to add some blog posts to our web page which will involve looping through an array and adding each array item to the page.
+### Task Two: Add blog posts via JavaScript
 
-Our blogs array is made up of a list of objects that contain titles and authors.
+Open the JavaScript file `training-files/scripts/blogs.js`. At the top of the file you will see a variable called `blopPosts`. This variable has been assigned an array of data, an array is just like a list and contains items. In this case we have a list of blogs each containing a title and an author. Our aim is to display these blog items on our web page.
 
 ```javascript
 var blogPosts = [
@@ -123,19 +131,21 @@ var blogPosts = [
 ];
 ```
 
-First we grab the element from the HTML where we want to display the blog posts and assign it to a variable. Again we use the JavaScript `getElementById()` method, notice the `id="blog-posts"` in the HTML markup.
+First we grab the element from the HTML where we want to display the blog posts and assign it to a variable. Again we use the JavaScript `getElementById()` method as we did in the previous task. Notice the `id="blog-posts"` in the HTML markup we're going to reference it in our JavaScript code.
 
 ```javascript
 var postsHolder = document.getElementById('blog-posts');
 ```
 
-The next step is to loop through the blog posts and assign them to our selected element. This involves a few steps:
+The next step is to loop through the blog posts now represented by our `blogPosts` variable and assign each item to the `postsHolder` variable that refrences the `blog-posts` element.
 
-- Use the `forEach()` method to loop through the blogs.
-- Create a `<p>` / paragraph element to contain each blog item.
-- Turn the array items in to text elements.
-- Add the text element to the paragraph element.
-- Append each paragraph element to the holder element we chose.
+This process involves a number of steps:
+
+- Use the `forEach()` method available on the `blogPosts` variable to loop through the blogs.
+- Create an HTML `<p>` / paragraph element to contain each blog item, see the `post` variable.
+- Turn each array item in to a text element, see the `text` variable.
+- Add the text element to the paragraph element using the `appendChild()` method.
+- Append each paragraph element `post` to the holder element `postHolder` using the `appendChild()` method.
 
 ```javascript
 blogPosts.forEach((item) => {
@@ -154,9 +164,9 @@ blogPosts.forEach((item) => {
 });
 ```
 
-Once this is done you can save your code and refresh the page you should see the blog posts appear.
+Once this is done you can save your code and refresh the page in your browser and you will see the blog posts appear.
 
-### Task Three: Style the Page
+### Task Three: Style the page with CSS
 
 Currently our web page has no styling applied. To style the page we need to write some CSS that applies styles to our HTML page.
 
@@ -165,6 +175,8 @@ On our page we have three elements to style:
 - The `<h1>` blog title
 - The `<h2>` posts title
 - The blog posts
+
+They are represented in the `index.html` by the following markup:
 
 ```html
 <h1 id="blog-title"></h1>
@@ -176,10 +188,10 @@ On our page we have three elements to style:
 
 To begin open the `training-files/style.css` file. The first step is to set the H1 element text to red and the font size to 50px.
 
-The code is made up of two parts:
+The CSS code is made up of two parts:
 
-- A selector which defines the element we want to style.
-- Attributes that apply our styling.
+- A selector which defines the element we want to style, `h1{ }`.
+- Attributes that apply our styling, `color: red;`.
 
 ```css
 h1 {
@@ -188,7 +200,7 @@ h1 {
 }
 ```
 
-If you save this file and refresh the page you'll see the stylings applied.
+Once you have made the additions to your `style.css` file you can save the file and refresh your browser. You will now see the new styles applied to your blog title.
 
 Next we want to edit the H2 element and the blog post elements.
 
@@ -198,6 +210,8 @@ We will do the following:
 - Add padding to the left of the H2 element
 - Italicise each blog post
 - Set the color of each blog post to dark magenta
+
+Again we just add some attributes to the selectors in the `style.css` file.
 
 ```css
 h2 {
@@ -211,11 +225,11 @@ p {
 }
 ```
 
-Again save the file and reload your web page and they styles will have taken effect.
+Finally save the `style.css` file and reload the browser to see the changes take effect.  
 
-We've completed the training!! Well done!!
+You've now completed the training, well done!! You've written some code!!
 
-**Note:** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript.
+**Note:** It may be slightly confusing that we have styled the blog posts by selecting `<p>` elements as none exist in the HTML markup. We though added `<p>` elements to the page when we added the blog posts using JavaScript in task two.
 
 ## Further Reading and Useful Resources
 
