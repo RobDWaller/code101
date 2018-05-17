@@ -24,8 +24,6 @@ To begin open the `training-files/index.html` file in a browser. You just need t
 
 Each training task requires you to make minor edits to the code and will require you to [uncomment existing code](http://www.tizag.com/javascriptT/javascriptcomment.php).
 
-The complete files for comparison can be found in the `complete-files` directory. These files are for reference, do not edit them.
-
 A woking version of this code can be found on [JSFiddle](https://jsfiddle.net/dg30snnq/)
 
 ## What is HTML?
@@ -74,6 +72,11 @@ For example the code below will add an alert box to a web page and display the m
 alert('Hello World');
 ```
 
+You can also select and manipulate HTML elements dynamically. The following code will select an `<h1 id="blog-title"></h1>` HTML element which you can then edit and change.
+
+```javascript
+document.getElementById('blog-title');
+```
 ## Training Tasks
 
 There are three training tasks, two are focussed on JavaScript and one on CSS. All the tasks make use of and effect HTML.
