@@ -42,11 +42,13 @@ As an example here is a simple unordered list of data marked up by HTML:
 </ul>
 ```
 
-Note that the closing tags are marked with a `/`. The code example will output an unordered list of items, each marked with a bullet point:
+The code example will output an unordered list of items, each marked with a bullet point:
 
 - Item One
 - Item Two
 - Item Three
+
+**Note:** closing tags in HTML are marked with a forward slash `/` eg `</h1>`.
 
 ## What are Cascading Style Sheets (CSS)?
 
@@ -74,13 +76,21 @@ For example the code below will display an alert box on a web page with the mess
 alert('Hello World');
 ```
 
-You can also select and manipulate HTML elements dynamically. The following code will select an `<h1 id="blog-title"></h1>` HTML element which you can then edit and change.
+You can also select and manipulate HTML elements dynamically. The following code will select an H1 element based on the id attribute.
 
 ```javascript
-document.getElementById('blog-title');
+document.getElementById('blog-header');
 ```
 
-**Note:** the above code will select any element that has the id attribute blog-title, eg `<p id="blog-title"></p>`.
+Will select:
+
+```html
+<h1 id="blog-header"></h1>
+```
+
+Once the element is selected you can change almost anything about it, what attributes it has, the values of the those attributes and the text the element contains.
+
+**Note:** the above code will select any element that has the id attribute blog-header, eg `<p id="blog-header"></p>`.
 
 ## Training Tasks
 
@@ -93,13 +103,13 @@ Before you begin remember to open the code in a text editor like [Atom](https://
 The first task requires you to edit the file `training-files/scripts/header.js`. The aim is to add a header to the webpage with JavaScript by placing text inside the `H1` element contained in the `index.html` file.
 
 ```html
-<h1 id="blog-title"></h1>
+<h1 id="blog-header"></h1>
 ```
 
 To define what our page header will be we need to assign a value to the `header` variable in the `header.js` file. Find the header variable and place some text between the quote marks and end your line with a semi-colon `;`.
 
 ```javascript
-var header = 'Set the title to what you want';
+var header = 'Set the header to what you want';
 ```
 
 Next we need to select the HTML element we want to add the header text to. In this case it's the `blog-header` element in the `index.html` file. The connection between the JavaScript and the HTML is made via the `id="blog-header"` attribute on the H1 element in the `index.html` file. We access the id attribute using the `getElementById()` method available in JavaScript.
@@ -174,7 +184,7 @@ blogPosts.forEach((item) => {
 
 Once this is done you can save your code and refresh the page in your browser and you will see the blog posts appear.
 
-**Note:** concatenation of strings is achieved using the `+` operator, eg `'string one' + 'string two' + 'string three'`. In the above code we are concatenating three strings `item.title + ': By ' + item.author`, two of which are represented by variables.
+**Note:** concatenation of strings is achieved using the `+` operator, eg `'string one ' + 'string two ' + 'string three'` will create `string one string two string three`. In the above code we are concatenating three strings `item.title + ': By ' + item.author`, two of which are represented by variables.
 
 ### Task Three: style the page with CSS
 
@@ -182,14 +192,14 @@ Currently our web page has no styling applied. To style the page we need to writ
 
 On our page we have three elements to style:
 
-- The `<h1>` blog title
+- The `<h1>` blog header
 - The `<h2>` posts title
 - The blog posts
 
 They are represented in the `index.html` by the following markup:
 
 ```html
-<h1 id="blog-title"></h1>
+<h1 id="blog-header"></h1>
 <h2>Posts:</h2>
 <div id="blog-posts">
 
@@ -210,7 +220,7 @@ h1 {
 }
 ```
 
-Once you have made the additions to your `style.css` file you can save the file and refresh your browser. You will now see the new styles applied to your blog title.
+Once you have made the additions to your `style.css` file you can save the file and refresh your browser. You will now see the new styles applied to your blog header.
 
 Next we want to style the H2 element and the blog post elements.
 
