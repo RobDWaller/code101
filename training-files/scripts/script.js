@@ -4,7 +4,7 @@
  * @author Rob Waller <rdwaller1984@googlemail.com>
  */
 window.onload = function () {
-    title();
+    header();
 
     blog();
 }
